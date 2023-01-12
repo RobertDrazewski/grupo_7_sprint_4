@@ -10,6 +10,7 @@ app.use(express.static('public'));
 
 app.use(mainRouter);
 
+
 // configuramos ejs como template engine
 
 app.set('view engine','ejs');
