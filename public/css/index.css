@@ -1,0 +1,637 @@
+ * {
+    font-size: 10px;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family:  'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --yellow:#EAC926;
+    --dark-blue: #03264C;
+    --light-blue: #1259c3;
+    --gray: #666;
+    --light-gray: #ebebeb;
+    --green: #39b54a;
+  }
+.body-container{
+    width: 100%;
+  }
+
+
+/*HEADER*/
+
+header {
+  font-size: 12px;
+  background-color: rgb(178, 212, 235);
+}
+
+.header-container{
+  width: 100%;
+  font-style: normal;
+  font-size: 12px; 
+  background-color: rgb(178, 212, 235);
+}
+
+.barra1,
+.barra2,
+.barra3,
+.barra4,
+.barra5,
+.barra6{
+  text-decoration: none;
+  background-color:aquamarine;
+  color: rgb(0, 0, 0);
+  padding: 0.5rem;
+  margin: 0.62rem;
+  border-radius: 1rem;
+  box-shadow: 0.12rem 0.12rem rgb(29, 144, 221);
+  display: inline-flex;
+  justify-content: flex-end;
+  }
+
+ .barra a{
+  font-size: 100%;
+ }
+
+.banner{
+  width: 100%;
+  margin-top: 140px;
+}
+.banner-sec{
+  position: relative;
+}
+.donde{
+  position: absolute;
+  bottom: 32%;
+  right: 45%;
+  opacity: 50%;
+  font-size: 16px;
+  text-align: left;
+  padding: 2px 4px;
+}
+.holder{
+  border-radius: 7px;
+  border: none;
+  padding: 1px 2px 1px 25px;
+}
+.fa-magnifying-glass{
+  position: absolute;
+  left: 3%;
+  font-size: 16px;
+  bottom: 15%;
+  opacity: 50%
+}
+
+.fa-plane-up{
+  rotate: 45deg;
+  font-size: 16px;
+}
+
+.div-logo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0 0 0;
+  width: 100vw;
+  background-color: rgb(178, 212, 235);
+  position: fixed;
+  z-index: 10;
+}
+    
+.div-logo img{
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+  .nav-bar{
+    display: flex;
+    justify-content: space-evenly;
+    width:80%;
+  }
+
+  .nav-bar a{
+    font-size: 16px;
+    text-align: center;
+  }
+
+
+/***********************     MAIN       *****************************/
+
+main {
+  position: relative;
+}
+
+.portada{ 
+    width: 100%;
+    color: rgb(5, 103, 136);
+    background-color: #ebebeb;
+    font-weight: 500;
+    text-align: center;
+    font-size: 1.5rem;/* este no lo toma porq arriba esta el *{}
+    */
+    padding: 10px 0;
+}
+
+.viajo-xq h4{
+  font-size: 20px;
+  margin: 0px 0 ;
+  font-weight: 100;
+  opacity: 70%;
+}
+
+.frase{
+  width: auto;
+  font-weight: 700;
+  font-size: 50px;
+  margin: 40px 0;
+}
+
+
+.viajo-xq {
+  background-color: #ebebeb;
+}
+
+.viajo-xq p{
+  font-size: 30px;
+  margin: 20px 10px;
+}
+
+.ofertas{
+  margin: 10% 0;
+}
+
+.nav-ofertas{
+  display: flex;
+  flex-wrap: wrap;
+  text-align: left;
+  font-size: 25px;
+}
+
+.ofertas div{
+  width: 32%;
+  margin: 2px;
+}
+.ofertas img{
+  width: 100%;
+  margin: 2px;
+}
+
+.ofertas h4 {
+  font-size: 25px;
+  margin: 0px 0 ;
+  font-weight: bold;
+  text-align: left;
+  padding: 10px 0;
+}
+
+.ofertas h3{
+  font-size: 20px;
+  margin: 5px;
+  }
+
+.nav-ofertas p{
+  font-size: 12px;
+  }
+
+.tarjetas{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: white;
+  padding: 40px;
+  margin: 10px 0;
+}
+
+.tarjetas div{
+  width: 10%;
+}
+
+.tarjetas img {
+  width: 100%;
+}
+.tarjetas p{
+  font-size: 15px;
+}
+
+.recomendados{
+  background-color: #ebebeb;
+  margin: 10% 0;
+  padding-bottom: 10px;
+}
+
+.experiencias-ValM{
+  text-align: left;
+  font-size: 25px;
+  width: 100%;
+  margin: 10% 0 20px 0.5%;
+}
+
+.recomendados nav{
+  display: flex;
+  flex-wrap: wrap;
+  text-align: left;
+  font-size: 25px;
+}
+
+.recomendados div{
+width: 24%;
+margin: 2px;
+}
+
+.card {
+  padding-bottom: 10px;
+}
+
+.recomendados img{
+  width: 100%;
+  height: auto;
+}
+.recomendados h3{
+  font-size: 20px;
+  margin: 5px;
+  }
+.recomendados div p{
+   margin: 5px;
+  }
+
+.nav-destinos p{
+font-size: 12px;
+}
+
+.exito{
+  border: solid 0.5px gray;
+  width: 40%;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.img-playa{
+  width: 100%;
+  margin: 15px 0 0 0;
+  }
+
+.descripcion{
+  opacity: 80%;
+}
+
+.redes{
+  display: flex;
+  justify-content: space-around;
+  border-radius: 2px;
+  margin-bottom: 15px;
+}
+.redes a{
+  text-decoration: none;
+  background-color: rgb(53, 194, 112);
+  color: rgb(247, 240, 240);
+  padding: 0.5rem;
+  margin: 0.62rem;
+  border-radius: 1rem;
+  box-shadow: 0.12rem 0.12rem rgb(29, 144, 221);
+}
+
+.ec-stars-wrapper {
+	/* Espacio entre los inline-block (los hijos, los `a`) 
+	   http://ksesocss.blogspot.com/2012/03/display-inline-block-y-sus-empeno-en.html */
+	font-size: 0;
+	/* Podríamos quitarlo, 
+		pero de esta manera (siempre que no le demos padding), 
+		sólo aplicará la regla .ec-stars-wrapper:hover a cuando
+		también se esté haciendo hover a alguna estrella */
+	display: flex;
+}
+.ec-stars-wrapper a {
+	text-decoration: none;
+	display: inline-block;
+	/* Volver a dar tamaño al texto */
+	font-size: 32px;
+	font-size: 2rem;
+	
+	color: #888;
+}
+
+.ec-stars-wrapper:hover a {
+	color: rgb(39, 130, 228);
+}
+/*
+ * El selector de hijo, es necesario para aumentar la especifidad
+ */
+.ec-stars-wrapper > a:hover ~ a {
+	color: #888;
+}
+
+
+
+/***************        FOOTER         ************/
+
+
+footer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-image: url(/img/banner-seaStar.jpg);
+  background-position: 100% 70%;
+  height: 12.5rem;
+  width:100%;
+  align-content: center;
+  opacity: 90%;
+ }
+.copy{
+  text-align: center;
+}
+
+
+
+/*
+footer a{
+  text-decoration: none;
+  color: #000000;
+  padding: 2px;
+  
+}
+footer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-self: center;
+  width: 100%;
+  }
+
+  .legales{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%
+  }*/
+
+
+/*
+  footer{
+    text-align: center;
+    border: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    background-color:rgb(172, 231, 191) ;
+    margin-bottom: 2rem;
+    margin-left: 0rem;
+    margin-right: 0rem;
+    border-radius: 1rem;
+    border: solid rgb(11, 11, 11);
+    padding-left: 0rem;
+    padding-bottom: .5rem;
+   }*/
+
+
+
+   /*******MEDIA QUERIES***************/
+
+
+@media  (max-width:769px){
+
+  .nav-bar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width:100%;
+  }
+
+  .div-logo{  
+   position: revert;
+  }
+  .div-logo img{
+    width: 200px;
+    margin: 10px;
+  }
+  .nav-bar a{
+    font-size: 14px;
+  }
+
+  .donde{
+    font-size: 14px;
+  }
+
+  .fa-magnifying-glass{
+    font-size: 14px;
+  }
+    
+  .fa-plane-up{
+    font-size: 14px;
+  }
+
+  .banner{
+    margin-top: 0px;
+  }
+
+  .frase{
+    font-size: 30px;
+    margin: 20px 0;
+  }
+
+  .portada h4{
+    font-size: 15px;
+    margin: 0px 0 ;
+  }
+
+  .viajo-xq {
+    background-color: #ebebeb;
+    height: 270px;
+  }
+    
+  .viajo-xq p{
+    font-size: 20px;
+    margin: 20px 10px;
+  }
+
+  .tarjetas p{
+    font-size: 10px;
+    width: 100%;
+  }
+
+  .tarjetas {
+    display: flex;
+    padding: 39px ;
+}
+.tarjeta-oculta{
+  display: none;
+}
+
+  .experiencias-ValM{
+    text-align: left;
+    font-size: 25px;
+    width: 100%;
+    margin: 0 0 20px 10px;
+  }
+
+  .recomendados{
+    margin: 5px 0 5px 0px
+  }
+
+  .recomendados nav{
+    font-size: 25px;
+  }
+  .recomendados div{
+    width: 32%;
+    margin: 2px;
+    }
+
+}
+
+/**************        MOBILE        *****************/
+@media  (max-width:443px){
+
+  .barra1,
+  .barra2,
+  .barra3,
+  .barra4,
+  .barra5,
+  .barra6 {
+    padding: 0.3rem;
+    margin: 0.3rem;
+    }
+      .nav-bar{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width:100%;
+      }
+
+      .div-logo{  
+        margin: 0rem 0rem;
+      }
+
+      .nav-bar a{
+        font-size: 10px;
+        text-align: center;
+      }
+
+      .donde{
+        font-size: 10px;
+        padding: 5px 0px;
+      }
+  
+      .fa-magnifying-glass{
+        font-size: 12px;
+      }
+      
+      .fa-plane-up{
+        font-size: 12px;
+      }
+
+      .frase{
+        font-size: 20px;
+        margin: 10px 0;
+      }
+
+      .portada h4{
+        font-size: 10px;
+        margin: 0px 0 ;
+      }
+
+      .viajo-xq {
+        background-color: #ebebeb;
+        height: 210px;
+      }
+
+      .viajo-xq p{
+        font-size: 15px;
+        margin: 20px 10px;
+      }
+
+      .nav-ofertas p {
+        font-size: 10px;
+    }
+
+      .ofertas div{
+        width: 40%;
+        margin: 2px;
+      }
+
+      .experiencias-ValM{
+        text-align: left;
+        font-size: 15px;
+        width: 100%;
+        margin: 0 0 20px 0.5%;
+      }
+
+      .recomendados nav{
+        justify-content: space-evenly;
+      }
+
+      .recomendados div{
+        width: 40%;
+        }
+
+      .recomendados img{
+        width: 100%;
+      }
+
+      .recomendados p{
+        font-size: 10px;
+      }
+
+      .exito {
+        width: 100%;
+      }
+}
+    
+/*
+    .contenedor-footer{
+        font-size: 10px;
+    }
+ */ 
+
+
+/*
+@media  (max-width:529px){
+  main p{
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    width: auto;
+    color: 0,0 ,0, 0.5;
+    font-weight: 700;
+    font-size: 90%;
+  }*/
+  /*.viajo-xq {
+    height: 600px;
+  }*/
+  
+  /*
+}
+
+*/
+/*
+@media (min-width: 481px)/*tablet´s*//* {
+    body{
+
+    }
+    .nav-2{
+      display: flex;
+      background-color: rgb(178, 212, 235);
+      padding: 1rem;
+      border-radius: 1rem;
+      text-align: center;
+      }
+
+      
+
+} /*reglas para cambios de dispositivos; "Mobile first"; Puse 560 solamente xq está en el video*/
+/*chequear el break point de mi index.html*/
+/*
+@media (min-width: 769px)/*laptop*//* {
+
+}*/
+
+
+
+
+    /* *************************  
+    1- quitar BORDE inferior de foto banner
+    2- Equipaje adicional
+    3-Logo wapp fixed
+    4-Propagandas
+    5-Log in o "abrir sesión"?
+    6- 
+    7- 
+    */

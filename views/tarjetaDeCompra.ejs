@@ -1,0 +1,31 @@
+<article class="productos-en-carrito">
+    <% for(let i= 0; i < producto.length; i++) {%> 
+    <div class="producto">
+        <div class="box-product">
+            <img src="<%= producto[i].img %>" class="img-product">
+            <div class="descripcion-producto">
+                <div class="bajarLinea"> 
+                    <h2 class="product-name"><%= producto[i].destino %></h2>
+                    <p class="dias"><%= producto[i].dias %> dias <span class="precio">$<%= producto[i].precio%></span> </p></div>
+                    <p class="ofertas"><%= producto[i].ofertas%></p>                              
+                <div class="fechaIdaVuelta">
+                    <p class="salida">Ida <span class="fechaViaje"><i class="fa-sharp fa-solid fa-plane-departure"></i><%= producto[i].ida%></span></p>
+                    <p class="vuelta">Vuelta <span class="fechaViaje"><i class="fa-solid fa-plane-arrival"></i><%= producto[i].vuelta%></span></p>
+                </div>
+                <h3 class="hospedaje"><i class="fa-solid fa-square-h"></i>Hospedaje</h3>
+                <p class="comentario"><%= producto[i].hospedaje%></p> <!--esta clase 2ble es para poner un formato de titulo apurado-->
+                <h3 class="hospedaje ">Alquiler de vehiculo</h3>
+                <p class="alqAuto comentario"><%= producto[i].vehiculo%></p>
+                <ul class="excursionList">
+                    <h3 class="hospedaje">Excursiones incluidas</h3>
+                    <li class="elementoExcursion"><%= producto[i].excursion1%></li>
+                    <li class="elementoExcursion"><%= producto[i].excursion2%></li>
+                </ul>
+                <button class="product-remove">
+                    <i class="fa-solid fa-trash"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <%}%>
+</article>

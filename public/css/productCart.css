@@ -1,0 +1,411 @@
+*{
+    margin: 0;  /*aca está la dif del footer en margin y padding*/
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+:root {
+    --yellow:#EAC926;
+    --dark-blue: #03264C;
+    --light-blue: #1259c3;
+    --gray: #666;
+    --light-gray: #ebebeb;
+    --green: #39b54a;
+  }
+.bodyClass{
+    background-color: rgb(178, 212, 235);/*IMPORTANTE sería la parte del body comín a todos*/
+}
+
+/*enlace AGREGAR PRODUCTOS*/
+.a-productos{
+    color: #000000;
+
+}
+
+.main-container{
+    /* border: solid 1px blue; */
+    width: 100%;
+    /* padding-top: 30px; */
+}
+
+     /*BANNER*/
+.main-top{
+    /* margin-bottom: 5px; */
+    width: 100%;/**/
+    /* border: dotted 2px red; */
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-bottom: 10px;
+}
+/* .subtitulo{
+    padding-top: 4px;
+    text-align: center;
+    font-size: 18px;
+} */
+.bottom-banner{
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 4px;
+    padding-left: 7px;
+    padding-right: 7px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ir-a-producto{
+    display: flex;
+    flex-direction: column-reverse;
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/*PRODUCTO*/
+.main-carrito{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+}
+
+.productos-en-carrito{
+    /* border: dashed 1px orange; */
+    /* padding: 15px; */
+    width: 100%;
+    
+}
+
+.producto{
+    width: 100%;
+    margin: auto;
+    border-bottom: solid 2px #666 ;
+    border-top: solid 2px #666;
+    margin-bottom: 0px; /*ACA SE SEPARAN LOS PRODUCTOS*/
+}
+/* .producto:hover {
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    transition: 0.3s;
+} */
+.box-product{
+    background-color: #FFFFFF;/**/
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    padding-top: 5px;
+    justify-content: space-between;
+    /*esto no me convence, pero no encontre otra manera que todas las box de los productos midieran iguales*/
+}
+.img-product{
+    display: none;
+    width: 45%;
+    /* height: 140px; */
+    margin: 10px;
+    /* padding-top: 5px;
+    margin-bottom: 20px;    */
+    
+}
+.descripcion-producto{
+    width: 100%;/**/
+    display: flex; /**/
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: space-evenly;
+    /* border: solid 1px #000000;   */
+    position: relative;
+    padding-bottom: 2rem;
+    font-size: 12px;
+}
+
+.descripcion-producto p{
+    padding-left: 2rem;
+}
+.descripcion-producto p,  .descripcion-producto h3, .descripcion-producto div{
+    margin-bottom: 5px;
+} /*Aca hay mucha repeticion, falta alga mas practico*/
+.descripcion-producto li{
+    margin: 5px;
+}
+.product-name{
+    padding-left: 1rem;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 1.5rem;
+    color: var(--gray);
+}
+
+.dias{
+    font-size: 18px;
+    font-weight: bolder;
+    margin: 1rem;
+    padding-top: 1rem;
+    border-top: solid  2px #666;
+    text-align: end;
+    margin-bottom: 0px;
+}
+.precio{
+    /* font-size: 18px; */
+    color: rgb(17, 17, 153);
+    /* margin-bottom: 4px; */
+}
+.ofertas{
+    font-size: 21px;
+    color: var(--green);
+    text-align: end;
+    margin-bottom: 1rem;
+    margin-right: 1.3rem;
+}
+/*ida y vuelta*/
+.vuelta, .salida{
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    font-size: 14px;
+}
+.fechaViaje{
+    color: rgb(178, 212, 235);
+    /* font-weight: normal; */
+    font-size: 12px;
+}
+.fechaIdaVuelta{
+    display: flex;
+}
+.fechaIdaVuelta span{
+    margin-top: 5px;
+}
+.fa-plane-departure, .fa-plane-arrival{
+    /* color: var(--gray); */
+    color: rgb(178, 212, 235);
+    margin-right: 5px;
+}
+/*hotel*/
+.fa-square-h{
+    color: #1259c3;
+    margin-right: 5px;
+}
+.hospedaje { 
+    padding-left: 2rem;
+}
+.comentario{
+    color: var(--gray);
+}
+.detail{
+    margin: auto;
+    padding: 1rem;
+    padding-top: 0px;
+}
+.alqExcursiones{
+    font-weight: bolder;
+}
+
+.excursionList li{
+    margin-left: 3rem;
+    color: var(--gray);
+}
+/*CANTIDAD*/
+.selector{
+    font-size: 14px;
+    font-weight: bolder;
+}
+.cantidad-producto{
+    padding-left: 2rem;
+    margin-bottom: 2rem;
+} 
+
+.product-remove{ /*ESTO DEBE IR CON OTRA PROPIEDAD, pero esta es la idea*/
+    bottom: 10px;
+    /* width: 10%; */
+    position: absolute;
+    margin: 1rem;
+    border-radius: 4px;
+    right: 0px;
+}
+
+
+/*MAIN BOTTOM (casi footer)*/
+.main-bottom{
+    margin: auto;
+    width: 100%;
+    display: flex;/**/
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 1rem;
+
+}
+.precio-total-muestra{
+    color: blue;
+}
+/*BOTONES*/
+.boton:hover{
+    color: rgb(7, 7, 7);
+    background-color: aquamarine;
+    opacity: 0.8;
+   }
+   
+.boton {
+    padding: 10px 5px;
+    background: #82cbdf;
+    color: white;
+    transition: all 1s;
+    justify-content: center;
+    margin-left: 1rem;
+    max-width: 20rem;
+    color: black;
+    border-radius: 5px;
+    border: 1px solid rgb(0, 0, 0);
+}
+.limpiar-container button{
+    font-size: 14px;
+    text-align: center;
+}
+
+.limpiar-carrito{
+    margin-right: 1rem;
+    /* background-color: rgb(185, 49, 49); */
+}
+.limpiar-container{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 4px;
+}
+
+
+
+
+@media (min-width: 768px){
+ 
+
+ /*BANNER*/
+ /* .subtitulo{
+    display: none;
+ } */
+ .main-top{
+    width: 80%;
+    position: relative;
+ }
+ .bottom-banner{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+ } 
+
+/*PRODUCTO*/
+.main-carrito{
+    width: 80%;
+    margin: auto;
+}
+
+ .img-product {
+    display: block;
+    width: 80%;
+    /* height: 220px; */
+    margin: auto;
+ }
+ .descripcion-producto{
+    width: 90%;
+ }
+ .ir-a-producto{
+    position: absolute;
+    bottom: 10px;
+    right: 10px; /*acomodar esta línea, es el boton de argegar producto*/
+    font-size: 20px;
+ }
+ /*PRODUCTO*/
+ .productos-en-carrito{
+    display: flex;
+    flex-wrap: wrap;
+ }
+ .producto{
+    width: 100%;
+    margin-bottom: 3rem;
+    border-bottom: none;/*guarda acá*/
+    border-top: none;
+ }
+ .producto:hover {
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    transition: 0.3s;
+}
+ /*MAIN BOTTOM*/
+ .limpiar-container button{
+    width: 40%;
+    font-size: 16px;
+    text-align: center;
+}
+ .main-bottom{
+    width: 80%;
+    margin: auto;
+    /* border: dashed 2px violet; */
+ }
+ .limpiar-carrito{
+    width: 150px;
+    font-size: 18px;
+ }
+ .medio-de-pago, .total-precio{
+    width: auto;
+    padding: 3px;
+    font-size: 18px;
+ }
+ #tipo-de-pago{
+    font-size: 18px;
+ }
+ .pago-compra{
+    width: 100px;
+    font-size: 18px;
+    margin: auto;  
+ }
+}
+
+@media (min-width: 1024px){
+   
+    .back-button{
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }    
+    /*PRODUCTO*/
+    .main-carrito{
+        width: 80%;
+        margin: auto;
+    }
+    .producto{
+        width: 100%;
+        margin-bottom: 1rem;  
+     }
+     .producto:hover {
+        -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        transition: 0.3s;
+    }
+    .img-product {
+        display: block;/**/
+        width: 47%;
+        align-self: center;
+     }
+    .bajarLinea{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 0px;
+        }    
+    .descripcion-producto{        
+            width: 50%;
+         }
+      
+    .dias {
+        border-top: none;
+    } 
+    /*MAIN BOTTOM*/
+
+}

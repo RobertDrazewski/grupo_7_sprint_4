@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('./partials/head') %>
+    <link rel="stylesheet" href="/css/productCart.css">
+    <title>Carrito</title>
+</head>
+<body class="bodyClass">
+    <%- include('./partials/header') %>
+    <main class="main-container">
+        <div class="main-top">
+            <!-- <h2 class="subtitulo">Carrito de compras</h2> -->
+            <div class="bottom-banner">
+            <a href="./producto" class="ir-a-producto">
+                <p class="a-productos">Agregar producto +</p>
+            </a>
+           </div>
+        </div>
+        <section class="main-carrito">
+            <%- include('tarjetaDeCompra') %>
+        </section>
+        <div class="main-bottom">
+            <div class="medio-de-pago">
+                <p class="total-precio"> <b>Total:</b> <span class="precio-total-muestra"><b>$13245</b></span></p>
+            </div>
+            <div class="limpiar-container">
+                <button class="boton limpiar-carrito">Vaciar</button>
+                <button class="boton pago-compra">Pagar</button>
+            </div>
+        </div>
+    </main>
+
+    <%- include('./partials/footer') %>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de resitro</title>
+    <link rel="stylesheet" href="/css/register.css">
+   
+</head>
+<body>
+
+    <%- include('./partials/header') %>
+
+    <main>
+        <h2>Formulario de registro</h2>
+        <form class="pform" action="register.html" method="GET">
+            
+            
+            <input type="text" name="nombre" id="nombre" placeholder="Nombre y apellido" required>
+
+        
+            <input type="email" name="nombre" id="email" placeholder="E-mail" required>
+           
+            
+            <input type="text" name="país" id="país" placeholder="País" required>
+
+        
+            <input type="text" name="num" id="celular" placeholder="N° de celular" required>
+            
+         
+            <input type="text" name="usuario" id="usuario" placeholder="Nombre de usuario" required>
+            
+       
+            <input type="password" name="Contraseña" id="password" placeholder="Contraseña" required>
+         <div class="contenedor-botones">
+            <input class="button-enviar" type="submit" value="Enviar" href="/">
+
+            <a href="login" class="button-enviar">Iniciar sesión</a>
+        </div>
+
+           
+ 
+           
+            </form>
+                
+            
+    </main>
+ 
+
+    <%- include('./partials/footer') %> 
+    
+</body>
+</html>

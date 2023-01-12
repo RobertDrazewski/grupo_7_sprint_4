@@ -1,0 +1,40 @@
+
+   .pfinal,
+   .pfinal1,
+   .pfinal2,
+   .ultimo{
+    color: rgb(3, 3, 3);
+    background-color: #5cbbe0;
+    border-radius: 5rem;
+    padding: .5rem;
+   }
+   .pfinal:hover,
+   .pfinal1:hover,
+   .pfinal2:hover,
+   .ultimo:hover{
+    background-color: aquamarine;
+   }
+   
+
+   
+  
+    
+   footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-image: url(/img/banner-seaStar.jpg);
+    background-position: 100% 70%;
+    height: 12.5rem;
+    width:100%;
+    align-content: center;
+    opacity: 90%;
+   }
+  .copy{
+    text-align: center;
+  }
+  @media  (max-width:425px){
+    .contenedor-footer{
+        font-size: 10px;
+    }
+  }  
