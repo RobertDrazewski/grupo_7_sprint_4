@@ -9,7 +9,8 @@ const mainRouter =require('./routes/mainRouter');
 app.use(express.static('public'));
 
 app.use(mainRouter);
-
+app.use(express.urlencoded({extended: false}));
+app.use(express.json());
 
 // configuramos ejs como template engine
 
@@ -22,4 +23,6 @@ app.set('views','views');
 
 
 const port = process.env.PORT || 3000;
+
+
 app.listen(port, ()=> console.log(`Servidor corriendo en el puerto ${port}`))

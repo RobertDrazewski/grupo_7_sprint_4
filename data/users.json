@@ -1,0 +1,67 @@
+[
+ {
+  "id": 1,
+  "nombre": "pepe",
+  "mail": "pepe@gmail.com",
+  "pais": "Argentina",
+  "num": 14321432,
+  "usuario": "pepito",
+  "contraseña": "ñdjghñiaweugdfciuwag"
+ },
+ {
+  "nombre": "pepe",
+  "mail": "drazewski@gmail.com",
+  "pais": "argelia",
+  "num": "123455678990",
+  "usuario": "pepito",
+  "Contraseña": "p8wyadfgicqwuyegad"
+ },
+ {
+  "id": "1,1",
+  "nombre": "pepe",
+  "mail": "drazewski@gmail.com",
+  "pais": "argelia",
+  "num": "123455678990",
+  "usuario": "pepito",
+  "Contraseña": "ñi"
+ },
+ {
+  "id": [
+   2,
+   null,
+   "1,11"
+  ],
+  "nombre": "pepe",
+  "mail": "drazewski@gmail.com",
+  "pais": "argelia",
+  "num": "123455678990",
+  "usuario": "pepito",
+  "Contraseña": ".ejhAGVSFUCHYJw.ndaxv "
+ },
+ {
+  "id": 0.8299477887344255,
+  "nombre": "pepe",
+  "mail": "drazewski@gmail.com",
+  "pais": "wlduohgxjv ",
+  "num": "º123456789",
+  "usuario": "qkwrudfjgxv",
+  "Contraseña": "ñwiykghf"
+ },
+ {
+  "id": 0.44508854334251047,
+  "nombre": "pepe",
+  "mail": "pepe@gmail.com",
+  "pais": "Colombia",
+  "num": "123456989999",
+  "usuario": "pepito perez"
+ },
+ {
+  "id": 0.2209478650835397,
+  "nombre": "pepe",
+  "mail": "drazewski@gmail.com",
+  "pais": "Colombia",
+  "num": "1234567890",
+  "usuario": "pepito",
+  "contraseña": "lapegamosconlaclasedehoy"
+ }
+]
