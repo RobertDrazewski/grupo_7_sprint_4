@@ -18,7 +18,7 @@ const usersController = require('../controllers/usersController');
     }
     })
 
-    let FileUpload = multer({storage: multerDiskstorage });
+    const FileUpload = multer({storage: multerDiskstorage });
 
    
 */
@@ -61,16 +61,13 @@ router.get('/productDetail',mainController.productDetail)
 //(7) /products/ :id (DELETE) Acción de borrado
 
 
-//Register
-    //router.get('/register',mainController.register)
-
 
 //login
 
 router.get('/login',mainController.login)
 
 
-// usuario
+// Register
 router.get('/register',usersController.register)
 router.post('/register',usersController.create)
 
