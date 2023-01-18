@@ -24,6 +24,13 @@ const usersController = require('../controllers/usersController');
 */
 
 
+//**********MIDDLEWARES **************/
+
+//let logUsuarioMiddleware = require ('../middlewares/logUsuarioMiddleware');
+//let logAdminMiddleware = require ('../middlewares/logAdminMiddleware');
+
+
+
 // para usar PUT y DELETE
 const methodOverride = require('method-override');
 router.use(methodOverride('_method'));
@@ -33,6 +40,9 @@ router.use(methodOverride('_method'));
 router.use(express.urlencoded({ extended: false}));
 router.use(express.json());
 
+
+
+/**********RUTAS ***********/
 //home
 
 router.get('/',mainController.index)
@@ -51,7 +61,7 @@ router.get('/productDetail',mainController.productDetail)
 
 //(4) Products (POST) (Acción de creación (a donde se envía el formulario )
 
-    //router.post('/registro', fileUpload.single('imagenUsuario')controlador.procesarFormulario );
+    //router.post('/registro', logUsuarioMiddleware ,fileUpload.single('imagenUsuario')controlador.procesarFormulario );
 
 //(5) Products/:id /edit (GET) Formulario de edición de productos
 
@@ -64,11 +74,11 @@ router.get('/productDetail',mainController.productDetail)
 
 //login
 
-router.get('/login',mainController.login)
+router.get('/login',/*logUsuarioMiddleware ,*/mainController.login)
 
 
 // Register
 router.get('/register',usersController.register)
-router.post('/register',usersController.create)
+router.post('/register',/*logUsuarioMiddleware ,*/usersController.create)
 
 module.exports=router
