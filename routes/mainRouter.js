@@ -2,6 +2,7 @@ const express = require('express');
 const router= express.Router();
 // const multer = require('multer');
 // const path = require ('path'); 
+// const varDeValidacion = require('./validations');
 const mainController= require('../controllers/mainController');
 const usersController = require('../controllers/usersController');
 
@@ -79,6 +80,6 @@ router.get('/login',/*logUsuarioMiddleware ,*/mainController.login)
 
 // Register
 router.get('/register',usersController.register)
-router.post('/register',/*logUsuarioMiddleware ,*/usersController.create)
+router.post('/register',/* logUsuarioMiddleware (o tambien validaciones) varDeValidacion ,*/usersController.create)
 
 module.exports=router
