@@ -6,9 +6,9 @@ const mainController = {
 index: (req,res)=>{
     res.render('index')
 },
-productCart: (req,res)=>{
-    return res.render('productCart', {"producto": products})
-},
+ productCart: (req,res)=>{
+     return res.render('productCart', {"producto": products})
+ },
 register: (req,res)=>{
     res.render('register')
 },

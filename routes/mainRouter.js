@@ -1,9 +1,25 @@
 const express = require('express');
 const router= express.Router();
-// const multer = require('multer');
-// const path = require ('path'); 
+const multer = require('multer');
+const path = require ('path'); 
 const mainController= require('../controllers/mainController');
 const usersController = require('../controllers/usersController');
+const productControllers = require('../controllers/productControllers')
+const carritoControllers = require('../controllers/mainControllers')
+/*ESTO LO AGREGO FACU, SE PUEDE BORRAR*/
+const storage = multer.diskStorage({
+    destination: (req, file, callback)=> {
+        let folder = path.join(__dirname, '../public/img')//aca indico donde se guarda el archivo
+        callback(null, folder)
+    }, 
+    filename:(req, file, callback) =>{
+        let img = 'img-' + Date.now() + path.extname(file.originalname);//nose porque no me guarda el nombre bien
+        callback(null, img)
+    }
+});
+
+let fileUpload = multer({ storage: storage});
+/*HASTA ACÁ*/
 
 
 /* const multerDiskstorage = multer.diskStorage({
@@ -49,7 +65,7 @@ router.get('/',mainController.index)
 
 //(1) Carrito
 
-router.get('/productCart',mainController.productCart)
+router.get('/productCarts',mainController.productCart)
 
 //(2) Agregar viaje (formulario de creación de producto)
 
@@ -80,5 +96,29 @@ router.get('/login',/*logUsuarioMiddleware ,*/mainController.login)
 // Register
 router.get('/register',usersController.register)
 router.post('/register',/*logUsuarioMiddleware ,*/usersController.create)
+
+/*PRODUCTO Y CARRITO*/
+//CARRITO
+router.get("/productCart", fileUpload.single('img'), carritoControllers.productCart);
+router.get("/prueba",fileUpload.single('img') , carritoControllers.prueba);
+router.post("/prueba", fileUpload.single('img') ,carritoControllers.create)/*configurado con multer */
+router.get("/:id/edit", carritoControllers.edit)
+router.put("/:id/edit", carritoControllers.editSave);
+router.get("/:id/delete", fileUpload.single('img'), carritoControllers.delete)
+router.delete("/:id/delete", fileUpload.single('img'), carritoControllers.deleteSave)
+
+
+
+//PRODUCTO
+router.get("/vistaProducto", fileUpload.single('img'), productControllers.product);
+router.get("/crearProducto",fileUpload.single('img') , productControllers.prueba);
+router.post("/crearProducto", fileUpload.single('img') ,productControllers.create)/*configurado con multer */
+router.get("/:id/editProduct", productControllers.edit)
+router.put("/:id/editProduct", productControllers.editSave);
+/*METODO DELETE*/
+router.get("/:id/deleteProduct", fileUpload.single('img'), productControllers.delete)
+router.delete("/:id/deleteProduct", fileUpload.single('img'), productControllers.deleteSave)
+
+
 
 module.exports=router

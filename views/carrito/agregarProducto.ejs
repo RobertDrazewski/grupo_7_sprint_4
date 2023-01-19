@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('../partials/head') %>
+    <link rel="stylesheet" href="/css/productCart.css">
+    <title>Carrito</title>
+</head>
+<body class="bodyClass">
+    <%- include('../partials/header') %>    
+    <h2>Agregar producto</h2>
+    <form action="/prueba" method="POST" enctype="multipart/form-data" >
+        <label for="">Id</label>
+        <input type="text" name="id">
+        <br>
+        <label for="">Destino</label>
+        <input type="text" name="destino">
+        <br>
+        <label for="">Dias</label>
+        <input type="text" name="dias">
+        <br>
+        <label for="">Precio</label>
+        <input type="text" name="precio">
+        <br>
+        <label for="">Ofertas</label>
+        <input type="text" name="ofertas">
+        <br>
+        <label for="">Ida</label>
+        <input type="text" name="ida">
+        <br>
+        <label for="">Vuelta</label>
+        <input type="text" name="vuelta">
+        <br>
+        <label for="">Hospedaje</label>
+        <input type="text" name="hospedaje">
+        <br>
+        <label for="">Vehiculo</label>
+        <input type="text" name="vehiculo">
+        <br>
+        <label for="">Excursion1</label>
+        <input type="text" name="excursion1">
+        <br>
+        <label for="">Excursion2</label>
+        <input type="text" name="excursion2">
+        <br>
+        <label for="">Cargar imagen de destino</label>
+        <input type="file" name="img">
+        <br>
+        <button type="submit">Crear</button>
+    </form>
+
+    <%- include('../partials/footer') %>
+</body>
+</html>
+

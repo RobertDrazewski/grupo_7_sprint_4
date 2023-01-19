@@ -1,0 +1,29 @@
+<% for(let i= 0; i < producto.length; i++) {%> 
+<article class ="producto"> <!--Este es el archivo que vamos a usar para crear el producto-->
+    <div class="box-product">
+        <div class="topProduct">
+            <img class="img" src="/img/<%= producto[i].img %>" alt="">
+            <h2 class="nombreProducto"><%= producto[i].destino%></h2>
+            <p class="descripcionImagen">La provincia de Salta posee un clima benigno y los encantos indicados para ser una de las más visitadas por los turistas durante todo el año. 
+                A sus bellezas naturales, que se pueden apreciar en las distintas regiones que alberga, se suma la diversidad de sus habitantes, 
+                que encandila a quienes se acerquen hasta allí por sus tradiciones y costumbres, algunas seculares.</p>
+        </div>
+        <div class="descripcionProducto">
+            <!-- <p class="dias">10 dias</p> -->
+            <h3 class="vuelos">Vuelos</h3>  
+            <p class="ida textoPlano"><i class="fa-sharp fa-solid fa-plane-departure"></i>ida: 25/11/2023</p>
+            <p class="vuelta textoPlano"><i class="fa-solid fa-plane-arrival"></i>vuelta: 12/12/2023</p>
+            <h3 class="subtitulo">Hospedaje</h3>
+            <p class="hospedaje textoPlano"><%= producto[i].hospedaje%></p>
+            <ul type= none class="excursionList">
+                <h3 class="hospedaje ">Excursiones incluidas</h3>
+                <li class="elementoExcursion textoPlano"><%= producto[i].excursion1%></li>
+                <li class="elementoExcursion textoPlano"><%= producto[i].excursion2%></li>
+            </ul>
+            <p class="precio">$15.000</p>
+            <p class="ofertas">25% OFF</p>
+            <button class="comprar">comprar</button>
+        </div>
+    </div>   
+</article>
+<%}%> 

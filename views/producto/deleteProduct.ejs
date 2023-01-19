@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('../partials/head') %>
+    <link rel="stylesheet" href="/css/productCart.css">
+    <title>Carrito</title>
+</head>
+<body class="bodyClass">
+    <%- include('../partials/header') %> 
+      
+    <h2>Eliminar producto</h2>
+    <% for(let i= 0; i < producto.length; i++) {%> 
+    <form  method="POST" action="/:id/delete/?_method=DELETE" enctype="multipart/form-data" >
+        <label for="">Id</label>
+        <input type="text" name="id" value="<%= producto[i].id %>">
+        <br>
+        <label for="">Destino</label>
+        <input type="text" name="destino" value="<%= producto[i].destino %>">
+        <br>
+        <label for="">Dias</label>
+        <input type="text" name="dias" value="<%= producto[i].dias %>">
+        <br>
+        <label for="">Precio</label>
+        <input type="text" name="precio" value="<%= producto[i].precio %>">
+        <br>
+        <label for="">Ofertas</label>
+        <input type="text" name="ofertas" value="<%= producto[i].ofertas %>">
+        <br>
+        <label for="">Ida</label>
+        <input type="text" name="ida" value="<%= producto[i].ida %>">
+        <br>
+        <label for="">Vuelta</label>
+        <input type="text" name="vuelta" value="<%= producto[i].vuelta %>">
+        <br>
+        <label for="">Hospedaje</label>
+        <input type="text" name="hospedaje" value="<%= producto[i].hospedaje %>">
+        <br>
+        <label for="">Vehiculo</label>
+        <input type="text" name="vehiculo" value="<%= producto[i].vehiculo %>">
+        <br>
+        <label for="">Excursion1</label>
+        <input type="text" name="excursion1" value="<%= producto[i].excursion1 %>">
+        <br>
+        <label for="">Excursion2</label>
+        <input type="text" name="excursion2" value="<%= producto[i].excursion2 %>">
+        <br>
+        <label for="">Cargar imagen de destino</label>
+        <input type="file" name="img" value="<%= producto[i].img %>">
+        <br>
+        <button type="submit">Borrar</button>
+    </form>
+    <%}%>
+
+    <%- include('../partials/footer') %>
+</body>
+</html>
