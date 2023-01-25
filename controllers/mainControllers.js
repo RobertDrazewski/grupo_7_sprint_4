@@ -3,10 +3,12 @@ const fs = require('fs')
 const path = require('path')
 // const rutaImg = path.join(__dirname)//no se usa no recuerdo porque la puse
                                         /*IMPORTANTE Hay 3 campos donde se llama "manualmente" al JSON */
-const productsFilePath = path.join(__dirname, '../productCart.json'); /*ESTE*/
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'))
-let archivoJSON = fs.readFileSync('productCart.json', {encoding: 'utf-8'});/*ESTE*/
+const productsFilePath = path.join(__dirname, '../data/productCart.json'); /*ESTE*/
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+let archivoJSON = fs.readFileSync(path.join(__dirname,'../data/productCart.json'), {encoding: 'utf-8'});
 let producto = JSON.parse(archivoJSON);
+
+
 
 
 const controllers = {
@@ -46,7 +48,7 @@ const controllers = {
             //Tercero pushear el usuario nuevo y pasarlo a JSON.stingify
             producto.push(newProductCart);
             productoJSON = JSON.stringify(producto);
-            fs.writeFileSync('productCart.json', productoJSON);/* y ESTE*/    
+            fs.writeFileSync('../data/productCart.json', productoJSON);/* y ESTE*/    
         } else {
             res.render('./carrito/agregarProducto')
         }       

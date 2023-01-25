@@ -6,9 +6,6 @@ const path = require('path');
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const users= JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
-// para usar POST
-//let userJSON = fs.readFileSync('../data/users.json', {encoding: 'utf-8'});
-
 
 const usersController = {
 
@@ -41,8 +38,6 @@ res.redirect('login');
 
 },
 login: (req,res) => {
-
-    //let id = users.map(u=>u.id)
 
     let idUser = {
         usuario: req.body.usuario,

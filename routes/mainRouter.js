@@ -2,8 +2,7 @@ const express = require('express');
 const router= express.Router();
 const multer = require('multer');
 const path = require ('path'); 
-// const multer = require('multer');
-// const path = require ('path'); 
+
 // const varDeValidacion = require('./validations');
 const mainController= require('../controllers/mainController');
 const usersController = require('../controllers/usersController');
@@ -12,7 +11,7 @@ const carritoControllers = require('../controllers/mainControllers')
 /*ESTO LO AGREGO FACU, SE PUEDE BORRAR*/
 const storage = multer.diskStorage({
     destination: (req, file, callback)=> {
-        let folder = path.join(__dirname, '../public/img')//aca indico donde se guarda el archivo
+        let folder = path.join(__dirname, '../public/img')
         callback(null, folder)
     }, 
     filename:(req, file, callback) =>{
@@ -22,25 +21,8 @@ const storage = multer.diskStorage({
 });
 
 let fileUpload = multer({ storage: storage});
-/*HASTA ACÁ*/
 
 
-/* const multerDiskstorage = multer.diskStorage({
-      destination:(req,file,cb)=> {   
-        let folder = path.join(__dirname,'../public/img);
-        cb(null,folder)
-    }, 
-    filename: (req,file,cb)=> {
-        let imageName = date.now() + path.extname(file.originalname);
-        cb(null,imageName);
-         //se puede usar en vez de "date.now" al parametro que representa al req
-    }
-    })
-
-    const FileUpload = multer({storage: multerDiskstorage });
-
-   
-*/
 
 
 //**********MIDDLEWARES **************/
@@ -72,22 +54,38 @@ router.get('/productCarts',mainController.productCart)
 
 //(2) Agregar viaje (formulario de creación de producto)
 
-        //router.get('/registro',controlador.mostrarFormulario )
-
+router.get("/crearProducto",fileUpload.single('img') , productControllers.getCreate);
+router.post("/crearProducto", fileUpload.single('img') ,productControllers.create)/*configurado con multer */
 
 //(3) ProductDetail --> (products/:id)
 router.get('/productDetail',mainController.productDetail)
 
 //(4) Products (POST) (Acción de creación (a donde se envía el formulario )
 
-    //router.post('/registro', logUsuarioMiddleware ,fileUpload.single('imagenUsuario')controlador.procesarFormulario );
+router.get("/vistaProducto", fileUpload.single('img'), productControllers.product);
+//router.post("/prueba", fileUpload.single('img') ,carritoControllers.create)/*configurado con multer */
+
 
 //(5) Products/:id /edit (GET) Formulario de edición de productos
 
+router.get("/:id/edit", carritoControllers.edit);
+router.get("/:id/editProduct", productControllers.edit);
+router.get("/productCart", fileUpload.single('img'), carritoControllers.productCart);
+
+
+
 //(6) /products/ :id (PUT) Acción de edición (a donde se envía el formulario):
 
+router.put("/:id/edit", carritoControllers.editSave);
+router.put("/:id/editProduct", productControllers.editSave);
 
 //(7) /products/ :id (DELETE) Acción de borrado
+
+router.get("/:id/delete", fileUpload.single('img'), carritoControllers.delete)
+router.delete("/:id/delete", fileUpload.single('img'), carritoControllers.deleteSave)
+
+router.get("/:id/deleteProduct", fileUpload.single('img'), productControllers.delete)
+router.delete("/:id/deleteProduct", fileUpload.single('img'), productControllers.deleteSave)
 
 
 
@@ -99,28 +97,6 @@ router.get('/login',/*logUsuarioMiddleware ,*/mainController.login)
 // Register
 router.get('/register',usersController.register)
 router.post('/register',/* logUsuarioMiddleware (o tambien validaciones) varDeValidacion ,*/usersController.create)
-
-/*PRODUCTO Y CARRITO*/
-//CARRITO
-router.get("/productCart", fileUpload.single('img'), carritoControllers.productCart);
-router.get("/prueba",fileUpload.single('img') , carritoControllers.prueba);
-router.post("/prueba", fileUpload.single('img') ,carritoControllers.create)/*configurado con multer */
-router.get("/:id/edit", carritoControllers.edit)
-router.put("/:id/edit", carritoControllers.editSave);
-router.get("/:id/delete", fileUpload.single('img'), carritoControllers.delete)
-router.delete("/:id/delete", fileUpload.single('img'), carritoControllers.deleteSave)
-
-
-
-//PRODUCTO
-router.get("/vistaProducto", fileUpload.single('img'), productControllers.product);
-router.get("/crearProducto",fileUpload.single('img') , productControllers.prueba);
-router.post("/crearProducto", fileUpload.single('img') ,productControllers.create)/*configurado con multer */
-router.get("/:id/editProduct", productControllers.edit)
-router.put("/:id/editProduct", productControllers.editSave);
-/*METODO DELETE*/
-router.get("/:id/deleteProduct", fileUpload.single('img'), productControllers.delete)
-router.delete("/:id/deleteProduct", fileUpload.single('img'), productControllers.deleteSave)
 
 
 
